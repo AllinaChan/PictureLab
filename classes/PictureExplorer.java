@@ -804,5 +804,6 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     Picture bigLevin = pix.scale(2,2);
     bigLevin.explore();
   }
-  
+
+
 }
