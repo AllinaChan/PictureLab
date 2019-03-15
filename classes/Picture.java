@@ -97,6 +97,19 @@ public class Picture extends SimplePicture
       }
     }
   }
+
+  /** Method to set the blue to 0 */
+  public void moreRed()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setRed(pixelObj.getRed()+100);
+      }
+    }
+  }
   
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
