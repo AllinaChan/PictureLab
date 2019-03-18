@@ -24,14 +24,6 @@ public class PictureTester
     beach.moreRed();
     beach.explore();
   }
-
-  public static void testGrayScale()
-  {
-    Picture beach = new Picture("download.jpg");
-    beach.explore();
-    beach.grayscale();
-    beach.explore();
-  }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -66,6 +58,12 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+
+  public static void testnegate(){
+      Picture swan=new Picture("swan.jpg");
+      swan.negate();
+      swan.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -76,8 +74,6 @@ public class PictureTester
     // to run
     //testZeroBlue();
     //testMoreRed();
-    testGrayScale();
-
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
@@ -99,5 +95,6 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
+      testnegate();
   }
 }

@@ -54,6 +54,7 @@ public class IntArrayWorker
     }
     return total;
   }
+
   
   /**
    * Method to fill with an increasing count
