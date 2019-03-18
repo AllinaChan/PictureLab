@@ -77,6 +77,7 @@ public class PictureTester
     //testZeroBlue();
     //testMoreRed();
     testGrayScale();
+
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
