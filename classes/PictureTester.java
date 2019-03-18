@@ -24,6 +24,14 @@ public class PictureTester
     beach.moreRed();
     beach.explore();
   }
+
+  public static void testGrayScale()
+  {
+    Picture beach = new Picture("download.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
+  }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -67,7 +75,8 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
     //testZeroBlue();
-    testMoreRed();
+    //testMoreRed();
+    testGrayScale();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
