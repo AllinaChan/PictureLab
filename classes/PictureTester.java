@@ -16,6 +16,13 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
+    public static void testKeepOnlyBlue()
+    {
+        Picture beach = new Picture("beach.jpg");
+        beach.explore();
+        beach.keepOnlyBlue();
+        beach.explore();
+    }
 
   public static void testMoreRed()
   {
@@ -32,6 +39,8 @@ public class PictureTester
     beach.grayscale();
     beach.explore();
   }
+
+
   public static void testFixUnderWater()
   {
     Picture caterpillar = new Picture("water.jpg");
@@ -80,6 +89,7 @@ public class PictureTester
       swan.explore();
   }
 
+
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -89,6 +99,9 @@ public class PictureTester
     // to run
     //testZeroBlue();
     //testMoreRed();
+    testGrayScale();
+
+    testKeepOnlyBlue();
     //testGrayScale();
     testFixUnderWater();
     //testKeepOnlyBlue();
