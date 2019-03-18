@@ -127,6 +127,19 @@ public class Picture extends SimplePicture
       }
     }
   }
+
+  public void fixUnderwater()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setBlue(pixelObj.getBlue()-50);
+        pixelObj.setGreen(pixelObj.getGreen()+200);
+      }
+    }
+  }
   
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
@@ -181,7 +194,7 @@ public class Picture extends SimplePicture
             }
         }
     }
-  
+
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
     * current picture
