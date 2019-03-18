@@ -41,6 +41,14 @@ public class IntArrayWorkerTester
     int total = worker.getTotal();
     System.out.println("Total should be 21 and is " + total);
   }
+  public static void testGetColTotal()
+  {
+    IntArrayWorker worker = new IntArrayWorker();
+    int [][] nums3 = {{1, 2, 3}, {4, 5, 6}};
+    worker.setMatrix(nums3);
+    int total = worker.getColTotal(2);
+    System.out.println("Total should be " + total);
+  }
   
   /** Method to test getTotalNested */
   public static void testGetTotalNested()
@@ -99,6 +107,6 @@ public class IntArrayWorkerTester
     testGetTotal();
     testGetTotalNested();
     //testGetLargest();
-    //testGetColTotal();
+    testGetColTotal();
   }
 }
