@@ -99,9 +99,9 @@ public class PictureTester
     // to run
     //testZeroBlue();
     //testMoreRed();
-    testGrayScale();
+    //testGrayScale();
 
-    testKeepOnlyBlue();
+    //testKeepOnlyBlue();
     //testGrayScale();
     testFixUnderWater();
     //testKeepOnlyBlue();
@@ -125,6 +125,6 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
-      testnegate();
+      //testnegate();
   }
 }

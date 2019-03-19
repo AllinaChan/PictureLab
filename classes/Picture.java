@@ -141,18 +141,38 @@ public class Picture extends SimplePicture
     }
   }
 
-  public void fixUnderwater()
-  {
-    Pixel[][] pixels = this.getPixels2D();
-    for (Pixel[] rowArray : pixels)
-    {
-      for (Pixel pixelObj : rowArray)
+  public void fixUnderwater() {
+      Pixel[][] pixels = this.getPixels2D();
+      HashMap<Integer, Integer> blueIndexes = new HashMap<>();
+      for (int i = 0; i < pixels.length; i++) {
+          for (int j = 0; j < pixels[i].length; j++) {
+              pixels[i][j].setAlpha(0);
+              pixels[i][j].setGreen(pixels[i][j].getGreen() - 100);
+              pixels[i][j].setRed(pixels[i][j].getRed() + 45);
+              pixels[i][j].setBlue(pixels[i][j].getBlue() - 85);
+          /*if(pixels[i][j].getBlue()<100){
+              pixels[i][j].setRed(200);
+              pixels[i][j].setBlue(200);
+              pixels[i][j].setGreen(200);
+          }
+      }*/
+          }/*
+      for (int i = 0; i < pixels.length; i++)
       {
-        pixelObj.setBlue(pixelObj.getBlue()-50);
-        pixelObj.setGreen(pixelObj.getGreen()+200);
+          for (int j =0; j< pixels[i].length; j++)
+          {
+              if(pixels[i][j].getRed()>70 && pixels[i][j].getGreen()>70 && pixels[i][j].getBlue()<75){
+                  pixels[i][j].setRed(200);
+                  pixels[i][j].setBlue(200);
+                  pixels[i][j].setGreen(200);
+              }
+          }
+      }*/
+
       }
-    }
   }
+
+
 
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
