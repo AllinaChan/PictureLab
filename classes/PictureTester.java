@@ -97,6 +97,18 @@ public class PictureTester
       swan.explore();
   }
 
+  public static void testHorzontalMirror(){
+    Picture kitten=new Picture("kitten2.jpg");
+    kitten.mirrorHorizontal();
+    kitten.explore();
+  }
+
+  public static void testBottomtoTop(){
+      Picture moon=new Picture("moon-surface.jpg");
+      moon.mirrorBottomtoTop();
+      moon.explore();
+  }
+
 
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -135,5 +147,7 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
       //testnegate();
+    testHorzontalMirror();
+    testBottomtoTop();
   }
 }
