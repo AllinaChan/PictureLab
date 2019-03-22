@@ -108,6 +108,12 @@ public class PictureTester
       moon.mirrorBottomtoTop();
       moon.explore();
   }
+  public static void testSeagull()
+  {
+    Picture gull = new Picture ("seagull.jpg");
+    gull.mirrorSeagull();
+    gull.explore();
+  }
 
 
   /** Main method for testing.  Every class can have a main
@@ -123,16 +129,16 @@ public class PictureTester
 
     //testKeepOnlyBlue();
     //testGrayScale();
-    testFixUnderWater();
+    //testFixUnderWater();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    testMirrorVertical();
-    testMirrorVerticalRighttoleft();
-    //testMirrorTemple();
+    //testMirrorVertical();
+    //testMirrorVerticalRighttoleft();
+    testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
@@ -147,7 +153,8 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
       //testnegate();
-    testHorzontalMirror();
-    testBottomtoTop();
+    //testHorzontalMirror();
+    //testBottomtoTop();
+    testSeagull();
   }
 }
