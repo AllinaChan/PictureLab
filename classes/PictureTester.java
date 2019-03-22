@@ -115,6 +115,14 @@ public class PictureTester
     gull.explore();
   }
 
+  public static void testDiagonal(){
+      Picture blueMark=new Picture("blue-mark.jpg");
+      blueMark.mirrorDiagonal();
+      blueMark.explore();
+  }
+
+
+
   public static void mirrorGull(){
     Picture seagull=new Picture("seagull.jpg");
     seagull.mirrorHorizontal();
@@ -160,5 +168,8 @@ public class PictureTester
     //testHorzontalMirror();
     //testBottomtoTop();
     testSeagull();
+    testHorzontalMirror();
+    testBottomtoTop();
+    testDiagonal();
   }
 }
