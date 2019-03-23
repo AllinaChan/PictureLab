@@ -288,6 +288,53 @@ public class Picture extends SimplePicture
     }
     System.out.println(count);
   }
+
+  public void mirror4ArmSnowman()
+  {
+    int mirrorPoint = 192;
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int count = 0;
+    Pixel[][] pixels = this.getPixels2D();
+
+    // loop through the rows
+    for (int row = 153 ; row < mirrorPoint; row++)
+    {
+      // loop from 13 to just before the mirror point
+      for (int col = 100; col < 170; col++)
+      {
+
+        leftPixel = pixels[row][col];
+        rightPixel = pixels
+                [mirrorPoint - row +mirrorPoint][col];
+        rightPixel.setColor(leftPixel.getColor());
+        count +=1;
+      }
+    }
+    mirrorPoint = 224;
+    leftPixel = null;
+    rightPixel = null;
+    count = 0;
+
+    // loop through the rows
+    for (int row = 166 ; row < mirrorPoint; row++)
+    {
+      // loop from 13 to just before the mirror point
+      for (int col = 239; col < 297; col++)
+      {
+
+        leftPixel = pixels[row][col];
+        rightPixel = pixels
+                [mirrorPoint - row +mirrorPoint][col];
+        rightPixel.setColor(leftPixel.getColor());
+        count +=1;
+      }
+    }
+
+    System.out.println(count);
+  }
+
+
     public void mirrorDiagonal(){
         Pixel[][] pixels=this.getPixels2D();
         Pixel y;
