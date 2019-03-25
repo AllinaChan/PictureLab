@@ -136,6 +136,17 @@ public class PictureTester
     seagull.mirrorHorizontal();
     seagull.explore();
   }
+  public static void testCopy1(){
+      Picture flower2=new Picture("flower2.jpg");
+      flower2.copy(flower2,500,500);
+      flower2.explore();
+  }
+
+  public static void testCopy2(){
+      Picture flower1=new Picture("flower1.jpg");
+      flower1.copy2(flower1,100,0,500,500);
+      flower1.explore();
+  }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -176,9 +187,9 @@ public class PictureTester
       //testnegate();
     //testHorzontalMirror();
     //testBottomtoTop();
-    //testSeagull();
-    //testHorzontalMirror();
-    //testBottomtoTop();
-    //testDiagonal();
+    testSeagull();
+    testHorzontalMirror();
+    testBottomtoTop();
+    testDiagonal();
   }
 }
