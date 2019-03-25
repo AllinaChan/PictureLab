@@ -159,11 +159,11 @@ public class PictureTester
     //testMirrorVertical();
     //testMirrorVerticalRighttoleft();
     //testMirrorTemple();
-    testSnowman();
+    //testSnowman();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
@@ -176,9 +176,9 @@ public class PictureTester
       //testnegate();
     //testHorzontalMirror();
     //testBottomtoTop();
-    testSeagull();
-    testHorzontalMirror();
-    testBottomtoTop();
-    testDiagonal();
+    //testSeagull();
+    //testHorzontalMirror();
+    //testBottomtoTop();
+    //testDiagonal();
   }
 }

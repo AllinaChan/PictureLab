@@ -407,7 +407,11 @@ public class Picture extends SimplePicture
     this.mirrorVertical();
     this.write("collage.jpg");
   }
-  
+
+  public void myCollage()
+  {
+    Picture Snowman = new Picture("snowman.jpg");
+  }
   
   /** Method to show large changes in color 
     * @param edgeDist the distance for finding edges
