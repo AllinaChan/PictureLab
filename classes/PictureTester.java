@@ -164,6 +164,12 @@ public class PictureTester
       flower1.copy2(flower1,100,0,500,500);
       flower1.explore();
   }
+  public static void testCopy(){
+    Picture flower1=new Picture("the-cyanide-happiness-show-7.jpg");
+    flower1.copy2(flower1,100,0,500,500);
+    flower1.explore();
+  }
+
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -196,6 +202,8 @@ public class PictureTester
     //testCopy();
     //testEdgeDetection();
     testCannyEdge();
+    testCopy();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();

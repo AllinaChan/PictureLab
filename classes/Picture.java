@@ -440,9 +440,9 @@ public class Picture extends SimplePicture
 
   public void myCollage()
   {
-    Picture flower1 = new Picture("flower1.jpg");
+    Picture flower1 = new Picture("the-cyanide-happiness-show-7.jpg");
     Picture flower2 = new Picture("flower2.jpg");
-    this.copy2(flower1,100,100,0,0);
+    this.copy2(flower1,550,1500,0,20);
     this.copy2(flower2,100,100,100,0);
     this.copy(flower1,200,0);
     Picture flowerNoBlue = new Picture(flower2);
@@ -452,7 +452,6 @@ public class Picture extends SimplePicture
     this.copy(flower2,400,0);
     this.mirrorVertical();
     this.write("collage.jpg");
-
   }
   
   /** Method to show large changes in color 
