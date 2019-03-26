@@ -436,14 +436,14 @@ public class Picture extends SimplePicture
   {
     Picture flower1 = new Picture("flower1.jpg");
     Picture flower2 = new Picture("flower2.jpg");
-    this.copy2(flower1,0,0,200,200);
-    this.copy2(flower2,100,0,200,200);
-    this.copy2(flower1,200,0,300,300);
+    this.copy2(flower1,100,100,0,0);
+    this.copy2(flower2,100,100,100,0);
+    this.copy(flower1,200,0);
     Picture flowerNoBlue = new Picture(flower2);
     flowerNoBlue.zeroBlue();
-    this.copy2(flowerNoBlue,300,0,400,400);
-    this.copy2(flower1,400,0,500, 500);
-    this.copy2(flower2,500,0,0,400);
+    this.copy2(flowerNoBlue,50,50,100,0);
+    this.copy(flower1,400,0 );
+    this.copy(flower2,400,0);
     this.mirrorVertical();
     this.write("collage.jpg");
 
