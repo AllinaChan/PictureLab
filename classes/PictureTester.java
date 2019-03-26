@@ -1,3 +1,5 @@
+import org.opencv.core.Mat;
+
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -106,6 +108,14 @@ public class PictureTester
     swan.explore();
   }
 
+  public static void testCannyEdge()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.cannyEdgeDetection();
+    Picture finishedEdge= new Picture("edgeswan.jpg");
+    finishedEdge.explore();
+  }
+
   public static void testnegate(){
       Picture swan=new Picture("swan.jpg");
       swan.negate();
@@ -184,7 +194,8 @@ public class PictureTester
     //testCollage();
    // testCollage();
     //testCopy();
-    testEdgeDetection();
+    //testEdgeDetection();
+    testCannyEdge();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();

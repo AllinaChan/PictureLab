@@ -1,3 +1,9 @@
+import org.opencv.core.Core;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.imgproc.Imgproc;
+
 import java.awt.*;
 import java.awt.font.*;
 import java.awt.geom.*;
@@ -485,7 +491,23 @@ public class Picture extends SimplePicture
       }
     }
   }
-  
+
+
+  public void cannyEdgeDetection()
+  {
+    System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+    Mat picture = Imgcodecs.imread("swan.jpg");
+
+    Mat gray = new Mat();
+    Mat draw = new Mat();
+    Mat wide = new Mat();
+
+    Imgproc.cvtColor(picture, gray, Imgproc.COLOR_BGR2GRAY);
+    Imgproc.Canny(gray, wide, 50,150,3,false);
+    wide.convertTo(draw, CvType.CV_8U);
+
+  Imgcodecs.imwrite("edgeswan.jpg", draw);
+  }
   
   /* Main method for testing - each class in Java can have a main 
    * method 
