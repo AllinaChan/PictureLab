@@ -536,6 +536,18 @@ public class Picture extends SimplePicture
       }
     }
   }
+  public int[] getAverageForColumn(int col)
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    int [] arr = new int [pixels.length];
+    for (int row =0; row < pixels.length; row++)
+    {
+      int i = (pixels[row][col].getBlue() + pixels[row][col].getGreen() + pixels[row][col].getRed())/3;
+      arr[row] = i;
+    }
+    return arr;
+  }
+
 
   public void cannyEdgeDetection()
   {
