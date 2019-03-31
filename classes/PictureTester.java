@@ -1,4 +1,4 @@
-import org.opencv.core.Mat;
+import java.io.IOException;
 
 /**
  * This class contains class (static) methods
@@ -104,16 +104,16 @@ public class PictureTester
   public static void testEdgeDetection()
   {
     Picture swan = new Picture("swan.jpg");
-    swan.edgeDetection(5);
+    swan.edgeDetection(10);
     swan.explore();
   }
 
-  public static void testCannyEdge()
+  public static void testEdgeDetection2() throws IOException
   {
     Picture swan = new Picture("swan.jpg");
-    swan.cannyEdgeDetection();
-    Picture finishedEdge= new Picture("edgeswan.jpg");
-    finishedEdge.explore();
+    swan.edgeDetection2("swan.jpg");
+    Picture swan2 = new Picture("output.jpg");
+    swan2.explore();
   }
 
   public static void testnegate(){
@@ -172,8 +172,7 @@ public class PictureTester
 
   /** Main method for testing.  Every class can have a main
     * method in Java */
-  public static void main(String[] args)
-  {
+  public static void main(String[] args) throws IOException {
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
@@ -201,8 +200,8 @@ public class PictureTester
    // testCollage();
     //testCopy();
     //testEdgeDetection();
-    testCannyEdge();
-    testCopy();
+    testEdgeDetection2();
+  //  testCopy();
     testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
@@ -217,7 +216,7 @@ public class PictureTester
     //testSeagull();
     //testHorzontalMirror();
     //testBottomtoTop();
-      testMyCollage();
+      //testMyCollage();
     //testDiagonal();
     //testSeagull();
    //testHorzontalMirror();
